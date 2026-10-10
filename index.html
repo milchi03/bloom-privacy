@@ -65,7 +65,7 @@
 <body>
 <main>
   <h1>Bloom</h1>
-  <p class="updated">Support and privacy policy · Last updated: 5 October 2026</p>
+  <p class="updated">Support and privacy policy · Last updated: 10 October 2026</p>
 
   <h2 id="support">Support</h2>
   <p>Something broken, confusing, or missing? Email
@@ -87,15 +87,22 @@
   use the same Apple ID. If it does not, open <em>Buy me a coffee</em> and tap
   <em>Restore purchases</em>.</p>
 
+  <p><strong>Lost your profile or friend code?</strong> A profile belongs to
+  the copy of Bloom on your phone, so reinstalling the app starts a new one
+  with a new code. Make a new profile under <em>Menu › Profile</em> and share
+  the new code with your friends.</p>
+
   <h2>Privacy Policy</h2>
 
   <p class="lede">Bloom is a focus timer. This policy explains what happens to
   your information when you use it.</p>
 
-  <p class="lede">The short version: <strong>Bloom does not collect
-  anything.</strong> There are no accounts, no analytics, no advertising, and
-  no servers. Everything the app remembers is stored on your own device and
-  never leaves it.</p>
+  <p class="lede">The short version: <strong>Bloom collects nothing unless you
+  choose a name.</strong> There are no analytics, no advertising and no
+  tracking. Everything the app remembers about your focus sessions is stored
+  on your own device. The one optional feature that uses a server, planting
+  together with a friend, is described below, and it only ever sends the name
+  and code you chose.</p>
 
   <h2>What Bloom stores on your device</h2>
   <p>Bloom saves the following locally, so the app still knows what you were
@@ -114,32 +121,79 @@
     <li><strong>A session in progress</strong>, so that a running timer
       survives closing or restarting the app.</li>
   </ul>
-  <p>All of this is written to your device’s private app storage. It is not
+  <p>All of this is written to your device’s private app storage. It is never
   transmitted anywhere, and no one but you can read it.</p>
+
+  <h2>Planting together, and the optional profile</h2>
+  <p>Bloom can run a focus session together with a friend: you both start the
+  same countdown, and if either of you gives up, both trees die. For two
+  phones to find each other, something has to sit between them, so this
+  feature uses a server.</p>
+
+  <p><strong>You create a profile only if you ask to.</strong> The first time
+  you open <em>Plant together</em> or <em>Profile</em> in the menu, Bloom asks
+  for a name. Until you enter one, the app makes no network connection at all.
+  If you never do, nothing in this section applies to you.</p>
+
+  <p>A profile consists of:</p>
+  <ul>
+    <li><strong>A display name</strong> you type. It is shown to the friend you
+      plant with.</li>
+    <li><strong>A six-character code</strong>, generated for you, which a
+      friend types to join you. It is not derived from anything about you.</li>
+    <li><strong>A random identifier</strong> that the server assigns to your
+      copy of the app, so it can tell your profile from everyone else’s. It is
+      not your Apple ID, your email, your phone number or anything else about
+      you, none of which Bloom ever asks for.</li>
+    <li><strong>A notification token</strong>, only if you have session
+      notifications turned on, so that the server can tell your phone when
+      your friend starts or gives up while your screen is locked. It is removed
+      if you turn notifications off.</li>
+  </ul>
+
+  <p>While you plant together, the server also keeps the <strong>shared
+  session</strong>: who the two of you are, how long it runs, when it started
+  and whether one of you gave up. It does not receive your other sessions,
+  your forest, your settings or your labels; those stay on your device as
+  before.</p>
+
+  <p>The server is hosted by <strong>Supabase</strong> in the European Union.
+  Supabase processes this data on our behalf under
+  <a href="https://supabase.com/privacy">Supabase’s privacy policy</a>. Push
+  notifications are delivered through <strong>Expo’s push service</strong> and
+  Apple’s notification service, which see the message text and your
+  notification token and nothing else.</p>
+
+  <p>Your profile is tied to the copy of Bloom on your phone. Deleting the app
+  abandons it, and reinstalling starts a new one with a new code.</p>
 
   <h2>What Bloom does not do</h2>
   <ul>
-    <li>It does not create an account or ask for your name, email, or any other
-      personal detail.</li>
-    <li>It does not contain analytics, tracking, crash reporting, or
+    <li>It does not ask for your email, phone number, Apple ID or any other
+      personal detail. A profile is only a name you choose.</li>
+    <li>It does not contain analytics, tracking, crash reporting or
       advertising.</li>
-    <li>It does not use third-party services that collect data about you.</li>
-    <li>It does not access your contacts, photos, microphone, camera, or
+    <li>It does not access your contacts, photos, microphone, camera or
       location.</li>
-    <li>It has no servers and sends nothing anywhere. Everything except
-      buying the coffee works offline.</li>
+    <li>It never sends your focus sessions, your forest or your settings
+      anywhere. Everything except buying the coffee and planting together
+      works offline.</li>
   </ul>
 
   <h2>Notifications</h2>
   <p>If you turn on session notifications, Bloom asks iOS for permission to
-  send them. These are <strong>local notifications</strong>: your device
-  schedules and delivers them itself when your session ends. Nothing is sent to
-  a server, and no push notification service is involved. You can turn them off
-  inside Bloom, or in the iOS Settings app.</p>
+  send them. The end-of-session reminder is a <strong>local
+  notification</strong>: your device schedules and delivers it itself, with no
+  server involved.</p>
+  <p>If you also plant together with a friend, the server sends a
+  <strong>push notification</strong> when your friend starts the session or
+  gives up, so you learn of it even with the phone locked. These are the only
+  push notifications Bloom sends, and they stop if you turn session
+  notifications off, delete your profile or never create one.</p>
 
   <h2>Children</h2>
-  <p>Bloom is suitable for all ages and collects no information from anyone,
-  including children.</p>
+  <p>Bloom is suitable for all ages. It collects no information from anyone,
+  including children, beyond the chosen display name described above.</p>
 
   <h2>Buying a coffee</h2>
   <p>The one purchase in Bloom, <em>Buy me a coffee</em>, is handled entirely
@@ -149,11 +203,14 @@
   phone.</p>
 
   <h2>Deleting your data</h2>
-  <p>Deleting Bloom from your device removes everything it has stored,
-  permanently, apart from the copy in your own iPhone backups. None of it was
-  ever sent to us, so there is nothing further to request or erase, and
-  nothing for us to delete on your behalf. A coffee you bought stays with your
-  Apple ID.</p>
+  <p><strong>On your device:</strong> deleting Bloom removes everything it has
+  stored there, permanently, apart from the copy in your own iPhone backups. A
+  coffee you bought stays with your Apple ID.</p>
+  <p><strong>On the server:</strong> open <em>Menu › Profile › Delete
+  profile</em>. This removes your name, your code, your identifier, your
+  notification token and any shared sessions you hosted from the server
+  immediately. You can also write to the address below and we will do the same
+  for you. Server backups are kept for up to 90 days and then discarded.</p>
 
   <h2>Information Apple receives</h2>
   <p>Bloom is distributed through the App Store. Apple collects its own
@@ -164,9 +221,8 @@
 
   <h2>Changes to this policy</h2>
   <p>If Bloom gains a feature that changes any of the above — for example a
-  friends list, which would require accounts and a server — this policy will be
-  updated before that feature is released, and the date at the top will
-  change.</p>
+  friends list — this policy will be updated before that feature is released,
+  and the date at the top will change.</p>
 
   <h2>Contact</h2>
   <p>Questions about this policy, or anything else about Bloom:<br>
